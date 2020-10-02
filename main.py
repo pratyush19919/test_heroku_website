@@ -7,6 +7,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
+db.create_all()
 app.config["SECRET_KEY"] = "PAYMENT"
 app.config["SQLDATABASE"] = "sqlite:///payment.db"
 
